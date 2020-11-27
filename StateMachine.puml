@@ -1,0 +1,20 @@
+@startuml
+skinparam state<<Layout>> {
+    BackgroundColor Transparent
+    BorderColor Transparent
+    fontColor Transparent
+}
+skinparam Shadowing<<Layout>> false
+
+state visible1
+state invisible1<<Layout>>
+state visible2
+state invisible2<<Layout>>
+
+visible1 -right[hidden]-> invisible1
+visible1 -down[hidden]-> invisible2
+invisible1 -down[hidden]-> visible2
+
+visible1 --> visible2
+
+@enduml
